@@ -1,0 +1,122 @@
+% Modified from the Gelugor (Universiti Sains Malaysia) presentation theme for beamer by LIM Lian Tze <liantze@gmail.com>
+% https://github.com/liantze/beamer-gelugor
+% http://tex.my/gelugor-a-usm-beamer-theme/
+% Modified by Hung Vo (thanhhungqb@gmail.com), convert to CNU color
+% update 2020.08
+% Github: https://github.com/thanhhungqb/latex-beamer-theme-hcmut
+
+\ProvidesPackage{beamerthemeHCMUT}[2020/08/01]
+
+% \definecolor{HCMUTBaseColor}{RGB}{185,0,36}
+\definecolor{HCMUTBaseColor}{HTML}{002792}
+
+\definecolor{HCMUTSecondColor}{RGB}{137,220,255}
+\definecolor{HCMUTSecondColor}{HTML}{0c89dc}
+
+\definecolor{HCMUTwhite}{RGB}{255,255,255}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outer theme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[width=.15\paperwidth]{sidebar}
+\setlength{\beamer@headheight}{.165\paperheight}
+\pgfdeclareimage[width=.1\paperwidth]{small-logo}{main-logo.png}
+\pgfdeclareimage[width=.05\paperwidth]{main-logo}{small-logo.png}
+\setbeamertemplate{sidebar left}{%
+\vskip7pt
+\insertverticalnavigation{\beamer@sidebarwidth}%
+}
+
+\setbeamertemplate{footline}[text line]{%
+\insertshortauthor\strut\hfill\insertshorttitle\hfill\insertshortdate\hspace{1em}\insertframenumber/\inserttotalframenumber}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{pgfpicture}
+    \pgf@relevantforpicturesizefalse
+    \pgftransformxshift{-\Gm@lmargin}
+    \pgftransformyshift{\beamer@headheight+18pt}
+    \pgfpathmoveto{\pgfpoint{.15\paperwidth}{0pt}}
+    \pgfpathlineto{\pgfpoint{.15\paperwidth}{-\beamer@headheight}}
+    \pgfsetlinewidth{3.5pt}
+    \pgfsetinnerlinewidth{1pt}
+    \pgfsetinnerstrokecolor{HCMUTBaseColor}
+    \pgfsetcolor{white}
+    \pgfusepath{stroke}
+    \pgfpathmoveto{\pgfpoint{.15\paperwidth}{\paperheight}}
+    \pgfpathlineto{\pgfpoint{.15\paperwidth}{-.99\paperheight}}
+    \pgfsetlinewidth{0.5pt}
+    \pgfsetinnerlinewidth{0pt}
+    \pgfsetcolor{HCMUTBaseColor}
+    \pgfusepath{stroke}
+    \pgftext[at=\pgfpoint{.075\paperwidth}{-.97\paperheight},center,base]{\pgfuseimage{small-logo}}
+\end{pgfpicture}%
+\vskip-25pt%
+}
+
+\addtobeamertemplate{title page}{%
+\usebeamertemplate{title background}%
+\vskip .2\paperheight%
+}
+{}
+
+\newcommand\MakeBlueBackgroud{%
+    \pgfpathmoveto{\pgfpointorigin}
+    \pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-\paperheight}}
+    \pgfsetfillcolor{HCMUTSecondColor}
+    \pgfusepath{fill}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{title background}{%
+\begin{pgfpicture}
+    \pgf@relevantforpicturesizefalse
+    \pgftransformxshift{-\Gm@lmargin}
+    \pgftransformyshift{5.5pt}
+    \pgfusepath{fill}
+    %\MakeBlueBackgroud
+
+    % Logo
+    \pgftext[at=\pgfpoint{.02\paperwidth}{-.10\paperheight},left,base]{\pgfuseimage{main-logo}}
+
+\end{pgfpicture}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inner Theme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useinnertheme{rectangles}
+\setbeamertemplate{navigation symbols}{}
+
+\setlength{\leftmargini}{.5em}
+\setlength{\leftmarginii}{1.0em}
+\setlength{\leftmarginiii}{1.5em}
+\setlength{\leftmarginiv}{2.0em}
+\setlength{\leftmarginv}{2.5em}
+\setlength{\leftmarginvi}{3.0em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colours
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usecolortheme[named=HCMUTBaseColor]{structure}
+\usecolortheme{orchid}
+\setbeamercolor{title page}{fg=HCMUTSecondColor, bg=HCMUTwhite}
+\setbeamercolor{logo}{bg=HCMUTBaseColor}
+\setbeamercolor{frametitle}{fg=HCMUTwhite,bg=HCMUTSecondColor}
+\setbeamercolor{section in sidebar}{fg=HCMUTBaseColor}
+\setbeamerfont{section in sidebar}{series=\bfseries}
+\setbeamercolor{block title}{bg=HCMUTSecondColor!28!white,fg=HCMUTSecondColor}
+\setbeamercolor{block body}{bg=HCMUTBaseColor!15!white}
+
+\newcommand\ThankYouFrame{
+    \begin{frame}[plain,t]
+        \begin{pgfpicture}
+            \pgf@relevantforpicturesizefalse
+            \pgftransformxshift{-\Gm@lmargin}
+            \pgftransformyshift{5.5pt}
+            \MakeBlueBackgroud
+        \end{pgfpicture}
+    \end{frame}
+}

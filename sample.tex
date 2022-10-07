@@ -1,0 +1,91 @@
+% Github: https://github.com/thanhhungqb/latex-beamer-theme-cnu
+% Author: thanhhungqb
+% credit: https://github.com/makokal/beamer-themes
+
+\documentclass{beamer}
+% \documentclass[notes=only]{beamer}
+\usetheme{HCMUT}
+
+\usepackage[utf8]{inputenc}
+% \usepackage{palatino}
+% \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% \usepackage[expert]{mathdesign}
+\usepackage[protrusion=true,expansion=true,tracking=true,kerning=true]{microtype}
+
+\usepackage{algorithm2e}
+\usepackage{outlines}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{listings}
+
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+\title{HCMUT Beamer Theme}
+
+\author{Your name}
+
+\institute{Ho Chi Minh City University of Technology}
+\date {2022.03}
+
+\graphicspath{{imgs/}}
+
+
+\setbeamercolor{note page}{bg=white}
+\setbeamercolor{note title}{bg=white}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+% ===============================================================
+\begin{document}
+
+
+\begin{frame}[plain,t,noframenumbering]
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}[plain,t,noframenumbering]
+	\frametitle{Outline}
+\tableofcontents
+% \addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{HCMUT beamer theme}
+\begin{itemize}
+    \item The beamer theme with HCMUT style
+    \item Modified from: https://github.com/liantze/beamer-gelugor 
+\end{itemize}
+\end{frame}
+
+\section{Usage}
+\begin{frame}[fragile]{Usage}
+\begin{lstlisting}
+    \documentclass{beamer}
+    \usetheme{HCMUT}
+    \usepackage[utf8]{inputenc}
+    \begin{document}
+    ...
+    \end{document}
+
+\end{lstlisting}
+\end{frame}
+
+\section{Links}
+\begin{frame}{Links}
+    \begin{itemize}
+        \item Github: https://github.com/thanhhungqb/latex-beamer-theme-cnu
+        \item Overleaf: TBA
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]{}
+  \centering \Large
+  \emph{Thank you!}
+\end{frame}
+
+\end{document}
