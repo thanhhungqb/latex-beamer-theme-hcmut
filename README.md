@@ -9,7 +9,7 @@ File list:
 
 How to use:
 - Github: [https://github.com/thanhhungqb/latex-beamer-theme-hcmut](https://github.com/thanhhungqb/latex-beamer-theme-hcmut)
-- Overleaf template: [TBA](TBA)
+- Overleaf template: [https://www.overleaf.com/latex/templates/hcmut-beamer-theme/vzvgydbcnzhy](https://www.overleaf.com/latex/templates/hcmut-beamer-theme/vzvgydbcnzhy)
 - [Register](https://www.overleaf.com?r=2f24873e&rm=d&rs=b) for Overleaf (if you don't have one). Upload file download from GitHub to start working.
  
 This theme is provided 'as-is' WITHOUT any WARRANTY or SUPPORT. Using this script is at YOUR OWN RISK.
